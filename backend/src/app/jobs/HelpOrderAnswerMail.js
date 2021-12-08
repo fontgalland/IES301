@@ -10,7 +10,7 @@ class HelpOrderAnswerMail {
 
     await Mail.sendMail({
       to: `${order.student.name} <${order.student.email}>`,
-      subject: 'Resposta para seu pedido na GymPoint',
+      subject: 'Resposta para seu pedido na agit',
       template: 'help-order-answer',
       context: {
         student: order.student.name,

@@ -17,7 +17,7 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .email('Digite um email valido')
     .required('Campo E-mail é obrigatório'),
-  age: Yup.number().required('Campo idade é obrigatório'),
+  age: Yup.number().required('Campo idade é obrigatório').positive('A idade precisa ser positiva').max(99, 'Idade máxima 99 anos'),
   weight: Yup.number()
     .required('Campo peso é obrigatório')
     .positive('Campo peso precisa ser positivo')

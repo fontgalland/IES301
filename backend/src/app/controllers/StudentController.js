@@ -10,7 +10,7 @@ class StudentController {
       email: string()
         .email()
         .required(),
-      age: number().required(),
+      age: number().required().positive(),
       weight: number()
         .required()
         .positive()
