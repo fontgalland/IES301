@@ -31,13 +31,13 @@ class OrderController {
     if (!checkStudentHasMembership) {
       return res
         .status(401)
-        .json({ error: 'Alunos precisam estar matriculados para realizar ordens' });
+        .json({ error: 'Alunos precisam estar matriculados para realizar pedidos' });
     }
 
     if (!checkStudentHasMembership.active) {
       return res
         .status(401)
-        .json({ error: 'Matriculas precisam estar ativas para criar ordens' });
+        .json({ error: 'Matriculas precisam estar ativas para criar pedidos' });
     }
 
     const newOrder = await Order.create({

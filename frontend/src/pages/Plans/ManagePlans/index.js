@@ -128,7 +128,7 @@ export default function StorePlans() {
                 id="title"
                 name="title"
                 type="name"
-                placeholder="Start"
+                placeholder="Plano"
                 value={title || ''}
                 onChange={({ target }) => setTitle(target.value)}
               />
@@ -140,7 +140,7 @@ export default function StorePlans() {
                   id="duration"
                   name="duration"
                   type="number"
-                  placeholder="1"
+                  placeholder="Duração"
                   value={duration || ''}
                   onChange={({ target }) => setDuration(target.value)}
                 />
@@ -153,6 +153,7 @@ export default function StorePlans() {
                   fixedDecimalScale={2}
                   prefix="R$ "
                   name="price"
+                  placeholder="Preço"
                   value={price || ''}
                   onChange={({ target }) => setPrice(target.value)}
                 />
